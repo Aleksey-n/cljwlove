@@ -113,3 +113,36 @@ var1;; => 119999999
 (def greet
   #(println "Hello"))
 (greet)
+
+;;
+(defn do-nothing [x] identity x)
+(do-nothing 5)
+;; => 5
+
+(source identity)
+;; => nil
+
+;5
+(defn at [a b & c]
+ println 100)
+(at 1 2 3 4 5)
+;; => 100
+
+                                        ;6
+(source constantly)
+(defn mt [x] (fn [& args] x))
+
+(let [n 5;(rand-int Integer/MAX_VALUE)
+      f (mt n)]
+  (assert (= n (f)))
+  (assert (= n (f 123)))
+  (assert (= n (apply f 123 (range 100)))))
+
+(= 2 (apply mt  123 (range 100)))
+(source apply)
+(mt 2) (mt)
+
+(apply 2 1 2 '(3 4))
+;Spacemacs Docs: https://simpletutorials.com/c/3036/Spacemacs+%28Vim+mode%29+Cheatsheet
+
+
