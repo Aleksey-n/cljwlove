@@ -145,4 +145,10 @@ var1;; => 119999999
 (apply 2 1 2 '(3 4))
 ;Spacemacs Docs: https://simpletutorials.com/c/3036/Spacemacs+%28Vim+mode%29+Cheatsheet
 
-
+;Num 7
+(defn triplicate [f]
+  (dotimes [n 3] (println f)))
+(triplicate factor)
+;; => nil
+;;; #function[cljwlove.core/factor]
+;;It works !!!!!!!!!!!!!!!!!!!!!!! Just check paragraph 'Loop in 'Macros
