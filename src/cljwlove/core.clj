@@ -154,4 +154,5 @@ var1;; => 119999999
 ;;It works !!!!!!!!!!!!!!!!!!!!!!! Just check paragraph 'Loop in 'Macros
 
 (def test (fn [check] (+ check 1)))
-(test 0);; => 1
+(test 1)
+;; => 2
